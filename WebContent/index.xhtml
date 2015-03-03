@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://java.sun.com/jsf/html" xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+<f:view contentType="text/html" />
+
+<h:head>
+	<h:outputStylesheet name="/css/main.css" />
+</h:head>
+
+<h:panelGroup id="header" layout="block" >
+	<h:graphicImage id="headerT1" name="img/toplogo.gif" />
+	<h:graphicImage  id="headerT2" name="img/topright.gif" />
+</h:panelGroup>
+
+
+<h:panelGroup id="menu" layout="block">
+	<h:form>
+		<f:ajax render=":content">
+			<ul>
+				<li><h:commandButton action="#{ajaxNavi.setPage('include1')}" value="include1" /></li>
+				<li><h:commandButton action="#{ajaxNavi.setPage('include2')}" value="include2" /></li>
+			</ul>
+		</f:ajax>
+	</h:form>
+</h:panelGroup>
+
+<h:panelGroup id="content" layout="block">
+	<ui:include src="/WEB-INF/includes/#{ajaxNavi.page}.xhtml" />
+</h:panelGroup>
+
+</html>

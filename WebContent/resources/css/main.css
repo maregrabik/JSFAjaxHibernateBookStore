@@ -1,0 +1,11 @@
+@CHARSET "UTF-8";
+#header{
+    background-image: url(../img/topbkg.gif);
+    font-family:"Century Gothic", "Trebuchet MS", "Arial Narrow", Arial, sans-serif;
+    background-size: 100% 100%;
+}
+
+#headerT2{
+ float: right;
+height:70px;
+}

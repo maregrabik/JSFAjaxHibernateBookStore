@@ -9,3 +9,17 @@
  float: right;
 height:70px;
 }
+
+#footer{
+	
+    background-image: url(../img/topbkg.gif);
+    font-family:"Century Gothic", "Trebuchet MS", "Arial Narrow", Arial, sans-serif;
+    background-size: 100% 100%;
+    width: 1900px;
+    position: fixed; bottom: 0 !important;
+}
+
+#content{
+	  width: 1200px;
+    margin: 40px auto;
+	}

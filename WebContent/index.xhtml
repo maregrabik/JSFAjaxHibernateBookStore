@@ -1,16 +1,53 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://java.sun.com/jsf/html" xmlns:f="http://java.sun.com/jsf/core"
-	xmlns:ui="http://java.sun.com/jsf/facelets">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://java.sun.com/jsf/html" xmlns:f="http://java.sun.com/jsf/core" xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:p="http://primefaces.org/ui">
 <f:view contentType="text/html" />
 
 <h:head>
 	<h:outputStylesheet name="/css/main.css" />
 </h:head>
 
-<h:panelGroup id="header" layout="block" >
+<h:panelGroup id="header" layout="block">
 	<h:graphicImage id="headerT1" name="img/toplogo.gif" />
-	<h:graphicImage  id="headerT2" name="img/topright.gif" />
+	<h:graphicImage id="headerT2" name="img/topright.gif" />
 </h:panelGroup>
+
+
+<f:ajax render=":content">
+<h:form>
+<p:megaMenu orientation="horizontal" style="margin-top:20px">
+
+    <p:submenu label="TV" icon="ui-icon-check">
+        <p:column>
+            <p:submenu label="TV.1">
+                <p:menuitem value="Include1" actionListener="#{ajaxNavi.setPage('include1')}"  />
+                <p:menuitem value="Include2" actionListener="#{ajaxNavi.setPage('include2')}" />
+            </p:submenu>
+            <p:submenu label="TV.2">
+                <p:menuitem value="TV.2.1" url="#" />
+                <p:menuitem value="TV.2.2" url="#" />
+                <p:menuitem value="TV.2.3" url="#" />
+            </p:submenu>
+        </p:column>
+ 
+        <p:column>
+            <p:submenu label="TV.4">
+                <p:menuitem value="TV.4.1" url="#" />
+                <p:menuitem value="TV.4.2" url="#" />
+            </p:submenu>
+            <p:submenu label="TV.5">
+                <p:menuitem value="TV.5.1" url="#" />
+                <p:menuitem value="TV.5.2" url="#" />
+                <p:menuitem value="TV.5.3" url="#" />
+            </p:submenu>
+        </p:column>
+
+    </p:submenu>
+
+</p:megaMenu>
+ </h:form>
+	</f:ajax>
+	
+
 
 
 <h:panelGroup id="menu" layout="block">
@@ -24,8 +61,15 @@
 	</h:form>
 </h:panelGroup>
 
+
+
 <h:panelGroup id="content" layout="block">
 	<ui:include src="/WEB-INF/includes/#{ajaxNavi.page}.xhtml" />
+</h:panelGroup>
+
+
+<h:panelGroup id="footer" layout="block">
+	<h:outputText value="Marek Horaczy site" />
 </h:panelGroup>
 
 </html>

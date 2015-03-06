@@ -12,45 +12,11 @@
 </h:panelGroup>
 
 
-<f:ajax render=":content">
-<h:form>
-<p:megaMenu orientation="horizontal" style="margin-top:20px">
-
-    <p:submenu label="TV" icon="ui-icon-check">
-        <p:column>
-            <p:submenu label="TV.1">
-                <p:menuitem value="Include1" actionListener="#{ajaxNavi.setPage('include1')}"  />
-                <p:menuitem value="Include2" actionListener="#{ajaxNavi.setPage('include2')}" />
-            </p:submenu>
-            <p:submenu label="TV.2">
-                <p:menuitem value="TV.2.1" url="#" />
-                <p:menuitem value="TV.2.2" url="#" />
-                <p:menuitem value="TV.2.3" url="#" />
-            </p:submenu>
-        </p:column>
- 
-        <p:column>
-            <p:submenu label="TV.4">
-                <p:menuitem value="TV.4.1" url="#" />
-                <p:menuitem value="TV.4.2" url="#" />
-            </p:submenu>
-            <p:submenu label="TV.5">
-                <p:menuitem value="TV.5.1" url="#" />
-                <p:menuitem value="TV.5.2" url="#" />
-                <p:menuitem value="TV.5.3" url="#" />
-            </p:submenu>
-        </p:column>
-
-    </p:submenu>
-
-</p:megaMenu>
- </h:form>
-	</f:ajax>
-	
+<ui:include src="/WEB-INF/includes/menu.xhtml" />
 
 
 
-<h:panelGroup id="menu" layout="block">
+<!-- <h:panelGroup id="menu" layout="block">
 	<h:form>
 		<f:ajax render=":content">
 			<ul>
@@ -59,7 +25,7 @@
 			</ul>
 		</f:ajax>
 	</h:form>
-</h:panelGroup>
+</h:panelGroup> -->
 
 
 

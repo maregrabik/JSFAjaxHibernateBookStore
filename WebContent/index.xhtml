@@ -11,25 +11,13 @@
 	<h:graphicImage id="headerT2" name="img/topright.gif" />
 </h:panelGroup>
 
+<p:growl id="growl" showDetail="true" life="3000" />
 
 <ui:include src="/WEB-INF/includes/menu.xhtml" />
 
 
-
-<!-- <h:panelGroup id="menu" layout="block">
-	<h:form>
-		<f:ajax render=":content">
-			<ul>
-				<li><h:commandButton action="#{ajaxNavi.setPage('include1')}" value="include1" /></li>
-				<li><h:commandButton action="#{ajaxNavi.setPage('include2')}" value="include2" /></li>
-			</ul>
-		</f:ajax>
-	</h:form>
-</h:panelGroup> -->
-
-
-
 <h:panelGroup id="content" layout="block">
+	<ui:include src="/WEB-INF/includes/userMenu.xhtml" />
 	<ui:include src="/WEB-INF/includes/#{ajaxNavi.page}.xhtml" />
 </h:panelGroup>
 

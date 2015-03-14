@@ -1,25 +1,40 @@
 @CHARSET "UTF-8";
-#header{
-    background-image: url(../img/topbkg.gif);
-    font-family:"Century Gothic", "Trebuchet MS", "Arial Narrow", Arial, sans-serif;
-    background-size: 100% 100%;
+
+#header {
+	background-image: url(../img/topbkg.gif);
+	font-family: "Century Gothic", "Trebuchet MS", "Arial Narrow", Arial,
+		sans-serif;
+	background-size: 100% 100%;
 }
 
-#headerT2{
- float: right;
-height:70px;
+#headerT2 {
+	float: right;
+	height: 70px;
 }
 
-#footer{
-	
-    background-image: url(../img/topbkg.gif);
-    font-family:"Century Gothic", "Trebuchet MS", "Arial Narrow", Arial, sans-serif;
-    background-size: 100% 100%;
-    width: 1900px;
-    position: fixed; bottom: 0 !important;
+#footer {
+	background-image: url(../img/topbkg.gif);
+	font-family: "Century Gothic", "Trebuchet MS", "Arial Narrow", Arial,
+		sans-serif;
+	background-size: 100% 100%;
+	width: 1900px;
+	position: fixed;
+	bottom: 0 !important;
 }
 
-#content{
-	  width: 1200px;
-    margin: 40px auto;
-	}
+#content {
+	display: table;
+	margin: 40px auto;
+}
+
+#loginForm {
+ display: table-cell;
+    vertical-align: middle; 
+    text-align: center; 
+    width:200px;
+}
+
+.ui-stack {
+bottom: 100px;
+left: 100px;
+}

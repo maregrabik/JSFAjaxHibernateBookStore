@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd" >
+
+<hibernate-reverse-engineering>
+  <table-filter match-catalog="mareko" match-name="adress"/>
+  <table-filter match-catalog="mareko" match-name="authors"/>
+  <table-filter match-catalog="mareko" match-name="books"/>
+  <table-filter match-catalog="mareko" match-name="books_has_authors"/>
+  <table-filter match-catalog="mareko" match-name="books_has_categories"/>
+  <table-filter match-catalog="mareko" match-name="categories"/>
+  <table-filter match-catalog="mareko" match-name="customers"/>
+  <table-filter match-catalog="mareko" match-name="login_data"/>
+  <table-filter match-catalog="mareko" match-name="ord"/>
+  <table-filter match-catalog="mareko" match-name="ord_item"/>
+</hibernate-reverse-engineering>

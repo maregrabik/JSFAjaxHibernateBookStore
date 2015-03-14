@@ -3,14 +3,13 @@
 <f:view contentType="text/html" />
 
 
-<h:form>
-<p:megaMenu orientation="horizontal" style="margin-top:20px">
-
-    <p:submenu label="Books" icon="ui-icon-check">
+<h:form id="menuRender">
+<p:megaMenu orientation="horizontal" style="margin-top:20px " rendered="#{loginDataBean.loged}" >
+    <p:submenu label="Books" icon="ui-icon-check" style="margin-left:65%" >
         <p:column>
             <p:submenu label="TV.1">
-                <p:menuitem value="Include1" actionListener="#{ajaxNavi.setPage('include1')}" update=":content"  />
-                <p:menuitem value="Include2" actionListener="#{ajaxNavi.setPage('include2')}" update=":content" />
+                <p:menuitem value="Include1" update=":content"  />
+                <p:menuitem value="Include2"  update=":content" />
             </p:submenu>
             <p:submenu label="TV.2">
                 <p:menuitem value="TV.2.1" url="#" />
@@ -24,8 +23,8 @@
      <p:submenu label="Autohors" icon="ui-icon-check">
         <p:column>
             <p:submenu label="TV.1">
-                <p:menuitem value="Include1" actionListener="#{ajaxNavi.setPage('include1')}" update=":content"  />
-                <p:menuitem value="Include2" actionListener="#{ajaxNavi.setPage('include2')}" update=":content" />
+                <p:menuitem value="Include1"  update=":content"  />
+                <p:menuitem value="Include2"  update=":content" />
             </p:submenu>
             <p:submenu label="TV.2">
                 <p:menuitem value="TV.2.1" url="#" />
@@ -40,8 +39,8 @@
      <p:submenu label="Categories" icon="ui-icon-check">
         <p:column>
             <p:submenu label="TV.1">
-                <p:menuitem value="Include1" actionListener="#{ajaxNavi.setPage('include1')}" update=":content"  />
-                <p:menuitem value="Include2" actionListener="#{ajaxNavi.setPage('include2')}" update=":content" />
+                <p:menuitem value="Include1" update=":content"  />
+                <p:menuitem value="Include2"  update=":content" />
             </p:submenu>
             <p:submenu label="TV.2">
                 <p:menuitem value="TV.2.1" url="#" />
@@ -51,9 +50,6 @@
         </p:column>
  
     </p:submenu>
-    
-    
-</p:megaMenu>
- </h:form>
-	
+	</p:megaMenu>
+	 </h:form>
 </html>

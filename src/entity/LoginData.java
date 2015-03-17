@@ -1,15 +1,13 @@
 package entity;
 
+import static javax.persistence.GenerationType.IDENTITY;
 
-import java.util.HashSet;
-import java.util.Set;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
-import static javax.persistence.GenerationType.IDENTITY;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -19,12 +17,12 @@ public class LoginData implements java.io.Serializable {
 	private Integer idLoginData;
 	private String login;
 	private String password;
-	private Set<Customers> customerses = new HashSet<Customers>(0);
+	private Customers customerses = new Customers();
 
 	public LoginData() {
 	}
 
-	public LoginData(String login, String password, Set<Customers> customerses) {
+	public LoginData(String login, String password, Customers customerses) {
 		this.login = login;
 		this.password = password;
 		this.customerses = customerses;
@@ -59,12 +57,12 @@ public class LoginData implements java.io.Serializable {
 		this.password = password;
 	}
 
-	@OneToMany(fetch = FetchType.LAZY, mappedBy = "loginData")
-	public Set<Customers> getCustomerses() {
+	@OneToOne(fetch = FetchType.EAGER, mappedBy = "loginData")
+	public Customers getCustomerses() {
 		return this.customerses;
 	}
 
-	public void setCustomerses(Set<Customers> customerses) {
+	public void setCustomerses(Customers customerses) {
 		this.customerses = customerses;
 	}
 

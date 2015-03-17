@@ -15,10 +15,16 @@
 
 <ui:include src="/WEB-INF/includes/menu.xhtml" />
 
+<h:panelGroup  layout="block">
+
+	<ui:include src="/WEB-INF/includes/userMenu.xhtml" />
+
+</h:panelGroup>
+
 
 <h:panelGroup id="content" layout="block">
 	<ui:include src="/WEB-INF/includes/userMenu.xhtml" />
-	<ui:include src="/WEB-INF/includes/#{ajaxNavi.page}.xhtml" />
+	<ui:include src="/WEB-INF/includes/#{ajaxNavi.page}.xhtml"/>
 </h:panelGroup>
 
 

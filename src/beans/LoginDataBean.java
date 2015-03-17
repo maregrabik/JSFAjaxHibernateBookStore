@@ -10,6 +10,7 @@ import org.apache.commons.codec.digest.DigestUtils;
 
 import ajaxBeans.AjaxNavi;
 import DAO.LoginDataDAOimpl;
+import entity.Customers;
 import entity.LoginData;
 
 @ManagedBean(name = "loginDataBean")
@@ -17,6 +18,7 @@ import entity.LoginData;
 public class LoginDataBean {
 
 	private LoginData loginData;
+	private Customers customer;
 	private String username;
 	private String password;
 	private boolean isLoged = false;
@@ -119,12 +121,27 @@ public class LoginDataBean {
 		if (isLoged) {
 			getAjaxNavi().setPage("start");
 			context.addMessage(null, new FacesMessage("You have succesfully loged in, welcome: " + loginData.getLogin()));
+			this.setCustomer(loginData.getCustomerses());
 			System.out.println("dawaj start");
 		} else {
 			getAjaxNavi().setPage("loginForm");
 			context.addMessage(null, new FacesMessage("Error occured while looging in, pleas try again"));
 			System.out.println("dawaj login");
 		}
+	}
+
+	/**
+	 * @return the customer
+	 */
+	public Customers getCustomer() {
+		return customer;
+	}
+
+	/**
+	 * @param customer the customer to set
+	 */
+	public void setCustomer(Customers customer) {
+		this.customer = customer;
 	}
 
 }

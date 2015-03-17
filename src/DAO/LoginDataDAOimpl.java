@@ -36,6 +36,7 @@ public class LoginDataDAOimpl extends BaseDAOimpl<LoginData> implements LoginDat
 		}
 
 		if (x.size() > 0) {
+			loginData = x.get(0);
 			return true;
 		} else {
 			return false;

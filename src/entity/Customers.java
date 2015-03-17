@@ -3,15 +3,19 @@ package entity;
 
 import java.util.HashSet;
 import java.util.Set;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
+
 import static javax.persistence.GenerationType.IDENTITY;
+
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -56,7 +60,7 @@ public class Customers implements java.io.Serializable {
 		this.idCustomers = idCustomers;
 	}
 
-	@ManyToOne(fetch = FetchType.LAZY)
+	@OneToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "Adress_id", nullable = false)
 	public Adress getAdress() {
 		return this.adress;
@@ -66,7 +70,7 @@ public class Customers implements java.io.Serializable {
 		this.adress = adress;
 	}
 
-	@ManyToOne(fetch = FetchType.LAZY)
+	@OneToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "Login_data_id", nullable = false)
 	public LoginData getLoginData() {
 		return this.loginData;

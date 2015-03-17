@@ -1,9 +1,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://java.sun.com/jsf/html" xmlns:f="http://java.sun.com/jsf/core" xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:p="http://primefaces.org/ui">
-
-<p:stack icon="resources/img/laundry4 (2).png" expanded="true" rendered="#{loginDataBean.loged}">
-	<p:menuitem value="Logout" icon="resources/img/power18.png" url="#" />
-	<p:menuitem value="Settings" icon="resources/img/settings48.png" url="#" />
-	<p:menuitem value="Books" icon="resources/img/books8.png" url="#" />
-	<p:menuitem value="User" icon="resources/img/user168.png" url="#" />
-</p:stack>
+<h:form>
+	<p:stack icon="resources/img/laundry4 (2).png" expanded="true" rendered="#{loginDataBean.loged}">
+		<p:menuitem value="Logout" icon="resources/img/power18.png" url="#" />
+		<p:menuitem value="Settings" icon="resources/img/settings48.png" url="#" />
+		<p:menuitem value="Books" icon="resources/img/books8.png" url="#" />
+		<p:menuitem value="User" icon="resources/img/user168.png"  action="#{ajaxNavi.setPage('userPanel')}" update=":content" />
+	</p:stack>
+</h:form>
 </html>

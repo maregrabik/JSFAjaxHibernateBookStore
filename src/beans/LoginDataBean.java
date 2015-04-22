@@ -121,7 +121,7 @@ public class LoginDataBean {
 		if (isLoged) {
 			getAjaxNavi().setPage("start");
 			context.addMessage(null, new FacesMessage("You have succesfully loged in, welcome: " + loginData.getLogin()));
-			this.setCustomer(loginData.getCustomerses());
+			this.customer = loginDataDAO.getLoginData().getCustomerses();
 			System.out.println("dawaj start");
 		} else {
 			getAjaxNavi().setPage("loginForm");
@@ -138,7 +138,8 @@ public class LoginDataBean {
 	}
 
 	/**
-	 * @param customer the customer to set
+	 * @param customer
+	 *            the customer to set
 	 */
 	public void setCustomer(Customers customer) {
 		this.customer = customer;

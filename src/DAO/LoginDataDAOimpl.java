@@ -14,6 +14,7 @@ import entity.LoginData;
 
 public class LoginDataDAOimpl extends BaseDAOimpl<LoginData> implements LoginDataDAO {
 
+	private LoginData loginData;
 	public LoginDataDAOimpl(Class<LoginData> type) {
 		super(type);
 		// TODO Auto-generated constructor stub
@@ -21,7 +22,9 @@ public class LoginDataDAOimpl extends BaseDAOimpl<LoginData> implements LoginDat
 
 	public LoginDataDAOimpl() {
 		this(LoginData.class);
+		setLoginData(new LoginData());
 	}
+
 
 	@Override
 	public boolean isValid(LoginData loginData) {
@@ -36,12 +39,26 @@ public class LoginDataDAOimpl extends BaseDAOimpl<LoginData> implements LoginDat
 		}
 
 		if (x.size() > 0) {
-			loginData = x.get(0);
+			this.setLoginData(x.get(0));
 			return true;
 		} else {
 			return false;
 		}
 
+	}
+
+	/**
+	 * @return the loginData
+	 */
+	public LoginData getLoginData() {
+		return loginData;
+	}
+
+	/**
+	 * @param loginData the loginData to set
+	 */
+	public void setLoginData(LoginData loginData) {
+		this.loginData = loginData;
 	}
 
 }

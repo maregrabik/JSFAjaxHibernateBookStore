@@ -6,23 +6,72 @@
 <p:panel header="Personal Details">
 	<p:messages />
 	<h:panelGrid columns="2" columnClasses="label, value">
-		<h:outputText value="Fullname: *" />
+		<h:outputText value="Fullname:" />
 		<p:inplace id="fullNameU" editor="true">
 			<p:inputText value="#{userPanelAjaxActions.loginDataBean.customer.fullName}" required="true" label="Full name" />
 		</p:inplace>
 
-		<h:outputText value="@mail: *" />
+		<h:outputText value="Email:" />
 		<p:inplace id="emailU" editor="true">
-			<p:inputText value="#{userPanelAjaxActions.loginDataBean.customer.email}" required="true" label="Full name" />
+			<p:inputText value="#{userPanelAjaxActions.loginDataBean.customer.email}" required="true" label="Full name"  />
 		</p:inplace>
 
-		<h:outputText value="telephone: " />
+		<h:outputText value="Telephone:" />
 		<p:inplace id="phoneU" editor="true">
 			<p:inputText value="#{userPanelAjaxActions.loginDataBean.customer.phone}" required="true" label="Full name" />
 		</p:inplace>
 
 	</h:panelGrid>
 </p:panel>
+
+<p:panel header="Personal Details 2">
+	<p:messages />
+	<h:panelGrid columns="2" columnClasses="label, value">
+		<h:outputText value="Fullname:" />
+		<p:inplace id="fullNameU" editor="true">
+			<p:inputText value="#{userPanelAjaxActions.loginDataBean.customer.fullName}" required="true" label="Full name" />
+		</p:inplace>
+
+		<h:outputText value="Email:" />
+		<p:inplace id="emailU" editor="true">
+			<p:inputText value="#{userPanelAjaxActions.loginDataBean.customer.email}" required="true" label="Full name"  />
+		</p:inplace>
+
+		<h:outputText value="Telephone:" />
+		<p:inplace id="phoneU" editor="true">
+			<p:inputText value="#{userPanelAjaxActions.loginDataBean.customer.phone}" required="true" label="Full name" />
+		</p:inplace>
+
+	</h:panelGrid>
+</p:panel>
+
+<p:panel header="Personal Details 3" rendered="">
+	<p:messages />
+	<h:panelGrid columns="2" columnClasses="label, value">
+		<h:outputText value="Fullname:" />
+		<p:inplace id="fullNameU" editor="true">
+			<p:inputText value="#{userPanelAjaxActions.loginDataBean.customer.fullName}" required="true" label="Full name" />
+		</p:inplace>
+
+		<h:outputText value="Email:" />
+		<p:inplace id="emailU" editor="true">
+			<p:inputText value="#{userPanelAjaxActions.loginDataBean.customer.email}" required="true" label="Full name"  />
+		</p:inplace>
+
+		<h:outputText value="Telephone:" />
+		<p:inplace id="phoneU" editor="true">
+			<p:inputText value="#{userPanelAjaxActions.loginDataBean.customer.phone}" required="true" label="Full name" />
+		</p:inplace>
+
+	</h:panelGrid>
+</p:panel>
+
+
+<p:panelGrid id="userButtonPanel" columns="3" style="margin: 40px auto;">
+<p:commandButton value="Show personel data" action="#{userPanelAjaxActions.setActivePanel(1)}" />
+<p:commandButton value="Show login data" action="#{userPanelAjaxActions.setActivePanel(2)}" />
+<p:commandButton value="Show adress data" action="#{userPanelAjaxActions.setActivePanel(3)}" />
+</p:panelGrid>
 
 
 

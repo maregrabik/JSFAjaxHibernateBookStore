@@ -21,11 +21,16 @@ public class UserPanelAjaxActions {
 	@ManagedProperty(value = "#{loginDataBean}")
 	private LoginDataBean loginDataBean;
 
+	private Integer activePanel;
+
 	public void updateUserData() {
 
 		System.out.println(getLoginDataBean().getLoginData().getCustomerses());
-		
 
+	}
+
+	public UserPanelAjaxActions() {
+		activePanel =1;
 	}
 
 	/**
@@ -36,10 +41,27 @@ public class UserPanelAjaxActions {
 	}
 
 	/**
-	 * @param loginDataBean the loginDataBean to set
+	 * @param loginDataBean
+	 *            the loginDataBean to set
 	 */
 	public void setLoginDataBean(LoginDataBean loginDataBean) {
 		this.loginDataBean = loginDataBean;
+	}
+
+	/**
+	 * @return the activePanel
+	 */
+	public Integer getActivePanel() {
+		return activePanel;
+	}
+
+	/**
+	 * @param activePanel
+	 *            the activePanel to set
+	 */
+	public void setActivePanel(Integer activePanel) {
+		this.activePanel = activePanel;
+		System.out.println(activePanel.toString());
 	}
 
 }

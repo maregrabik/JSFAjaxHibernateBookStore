@@ -4,10 +4,10 @@
 <hibernate-configuration>
 	<session-factory name="factory">
 		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
-		<property name="hibernate.connection.password">password</property>
-		<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/mareko?zeroDateTimeBehavior=convertToNull</property>
-		<property name="hibernate.connection.username">root</property>
-		<property name="hibernate.default_schema">mareko</property>
+		<property name="hibernate.connection.password">ngage2</property>
+		<property name="hibernate.connection.url">jdbc:mysql://db4free.net:3306/marekobookstore?zeroDateTimeBehavior=convertToNull</property>
+		<property name="hibernate.connection.username">marekobookstore</property>
+		<property name="hibernate.default_schema">marekobookstore</property>
 		<property name="hibernate.dialect">org.hibernate.dialect.MySQLInnoDBDialect</property>
 		<property name="show_sql">true</property>
 		<property name="current_session_context_class">thread</property>

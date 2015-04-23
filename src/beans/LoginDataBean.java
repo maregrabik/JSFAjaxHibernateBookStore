@@ -5,10 +5,12 @@ import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ManagedProperty;
 import javax.faces.bean.SessionScoped;
 import javax.faces.context.FacesContext;
+import javax.servlet.http.HttpServletRequest;
 
 import org.apache.commons.codec.digest.DigestUtils;
 
 import ajaxBeans.AjaxNavi;
+import ajaxBeans.SpyImpl;
 import DAO.LoginDataDAOimpl;
 import entity.Customers;
 import entity.LoginData;
@@ -128,6 +130,15 @@ public class LoginDataBean {
 			context.addMessage(null, new FacesMessage("Error occured while looging in, pleas try again"));
 			System.out.println("dawaj login");
 		}
+		
+		//save information about using site
+		HttpServletRequest request = (HttpServletRequest) FacesContext.getCurrentInstance().getExternalContext().getRequest();
+		SpyImpl spyImpl = new SpyImpl();
+		spyImpl.saveTrace(request);
+		
+		
+		
+		
 	}
 
 	/**

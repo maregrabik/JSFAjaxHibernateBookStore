@@ -22,7 +22,7 @@ public class AuthorizationFilter implements Filter {
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws ServletException, IOException {
 		HttpServletRequest req = (HttpServletRequest) request;
 		LoginDataBean auth = (LoginDataBean) req.getSession().getAttribute("loginDataBean");
-System.out.println("Dupaa");
+		System.out.println("Dupaa");
 		if (auth != null && auth.isLoged()) {
 			// User is logged in, so just continue request.
 			chain.doFilter(request, response);
